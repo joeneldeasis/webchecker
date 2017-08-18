@@ -13,7 +13,7 @@ request.get({
         body = JSON.parse(body);
 
         for (i = 0; i < body.data.length; i++) {
-            if (body.data[i].url != "null") {
+            if (body.data[i].url != null && body.data[i].url != "null") {
                 getStatus(body.data[i].url, body.data[i].id);
             }
         }
